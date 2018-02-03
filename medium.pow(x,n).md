@@ -76,4 +76,4 @@ double myPow(double x, int n) {
 4. 使用已经释放的空间：int * p; p=(int *)malloc(5 * sizeof(int));free(p); *p=10;
 5. 数组开得太大，超出了栈的范围，造成栈溢出：int a[100000000];
 
-*立个flag，明天接着做
+*立个flag，明天接着做,今晚我非得把之前没安装好的微信装好不可
