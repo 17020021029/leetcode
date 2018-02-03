@@ -1,4 +1,4 @@
-#Sqrt(x)
+# Sqrt(x)
 
 题目描述
 
@@ -20,9 +20,9 @@ x is guaranteed to be a non-negative integer.
  
  Explanation: The square root of 8 is 2.82842..., and since we want to return an integer, the decimal part will be truncated.
  
-##解题过程
+## 解题过程
 
-###wrong answer
+### wrong answer
 
 算法很简单，很暴力，简单的认为只要取中间值缩小范围，再用一次循环遍历找到返回值即可
 
@@ -41,7 +41,7 @@ int mySqrt(int x) {
     return i;
 }
 ```
-###accepted
+### accepted
 
 参考discuss，发现我想的确实太简单了，不过开方的情况较少，可以用if列举情况，（不知道为什么，就觉得这种题与中间值有关，缩小运行时间？），好像还是很暴力，应该算二分迭代吧 
 
@@ -80,6 +80,6 @@ int mySqrt(int x){
     }
    }
    ```
-   ####总结
+   #### 总结
    
    题目大概设计二分的概念，但对此算法没有深入的理解，还要多练。此外，看到discuss好像还有牛顿迭代法，应该是个常用的工具
