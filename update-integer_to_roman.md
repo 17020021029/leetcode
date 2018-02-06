@@ -29,4 +29,4 @@ public:
 ## 反思
 这个写法很巧妙的一点是把各位数的大小作为了数组的下标，也正是因为给定的整型大小很小，也才给了这种算法实现的条件
 
-记得要再了解[const的用法](https://www.cnblogs.com/phpzhou/p/6390869.html)yiji[与static](https://zhidao.baidu.com/question/96430567.html)的区别
+记得要再了解[const的用法](https://www.cnblogs.com/phpzhou/p/6390869.html)以及[与static](https://zhidao.baidu.com/question/96430567.html)的区别
