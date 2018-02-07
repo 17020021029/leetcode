@@ -30,7 +30,7 @@ int searchInsert(int* nums, int numsSize, int target) {
 ### 改进
 二分法减小时间复杂度,而且若没有target，不用讨论，就可以直接得到索引
 #### 代码实现
-```
+```ruby
 int searchInsert(int* nums, int numsSize, int target) {
     int i=0;
     int r=numsSize-1;
