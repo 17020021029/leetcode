@@ -10,7 +10,7 @@ You may assume no duplicates in the array.
 ### 思路一
 遍历，若相等，则返回数组下标，如不相等，则分情况讨论：大于最后一个元素；小于第一个元素；居中
 #### 代码实现
-```
+```ruby
 int searchInsert(int* nums, int numsSize, int target) {
     int result;
     for(int i=0;i<numsSize;i++)
