@@ -47,7 +47,7 @@ int mySqrt(int x) {
 
 
 思路：
-```
+```ruby
 int mySqrt(int x){
     if(x == 0)
     {
@@ -80,6 +80,29 @@ int mySqrt(int x){
     }
    }
    ```
+  ### ac(c++)
+  ```ruby
+  class Solution {
+public:
+    int mySqrt(int x) {
+        int left=1,right=x,mid;
+        if(x==0)    return 0;
+        while(true)
+        {
+            mid=(left+right)/2;
+            if(mid>x/mid)
+                right=mid-1;
+            else 
+            {
+                if(mid+1>x/(mid+1))
+                    return mid;
+                left=mid+1;
+            }
+        }
+        return right;
+    }
+};
+```
    #### 总结
    
    题目大概设计二分的概念，但对此算法没有深入的理解，还要多练。此外，看到discuss好像还有牛顿迭代法，应该是个常用的工具
