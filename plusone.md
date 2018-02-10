@@ -63,7 +63,7 @@ int* plusOne(int* digits, int digitsSize, int* returnSize) {
     {
         result=(int*)malloc(sizeof(int)*(digitsSize+1));        //malloc的用法，多加了个*
         *(result)=1;
-        for(i=0;i<digitsSize;i++)   
+        for(i=0;i<digitsSize;i++)           //我现在都想不明白当时为啥写digitsSize+1   
             *(result+i+1)=*(digits+i);
         *returnSize=digitsSize+1;
         return result;
