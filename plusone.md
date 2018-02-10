@@ -42,3 +42,36 @@ int* plusOne(int* digits, int digitsSize, int* returnSize) {
     }
 }
 ```
+### 二
+经学长教导，（打字的手真真的在颤抖），恍然大悟，竟然是因为那么多小错误导致出错，不知道怎么说好（该打该打），一直没改掉的毛病我就不信改不了！！！
+#### 正确代码
+```ruby
+/**
+ * Return an array of size *returnSize.
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* plusOne(int* digits, int digitsSize, int* returnSize) {
+    int *result;
+    int i,carry=1,num;    /*carry为进位，num为留位*/
+    for(i=digitsSize-1;i>=0;i--)        //误将i--写为i++
+    {
+        num=(*(digits+i)+carry)%10;
+        carry=(*(digits+i)+carry)/10;
+        *(digits+i)=num;
+    }
+    if(carry==1)       // 明明怕忘了在前边注明了那个是留位，那个是进位，可还是写错
+    {
+        result=(int*)malloc(sizeof(int)*(digitsSize+1));        //malloc的用法，多加了个*
+        *(result)=1;
+        for(i=0;i<digitsSize;i++)   
+            *(result+i+1)=*(digits+i);
+        *returnSize=digitsSize+1;
+        return result;
+    }
+    else
+    {
+        *returnSize=digitsSize;
+        return digits;
+    }
+}
+```
