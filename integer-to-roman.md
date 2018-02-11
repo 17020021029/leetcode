@@ -2,9 +2,7 @@
 harder than "Roman t Integer"也是期末考试题
 ## Problem
 Given an integer, convert it to a roman numeral.
-
 Input is guaranteed to be within the range from 1 to 3999.
-
 ## 解题过程
 ### 一
 题目范围是1到3999，不是很大，因此可以直接将字符连起来，每次减去能表示的最大整数，将表示的字符连起来。
@@ -50,7 +48,7 @@ public:
 ```
 ### 三
 实在不想再想其它算法，干脆分类讨论
-```
+```ruby
 class Solution {
 public:
     string intToRoman(int num) {
@@ -119,3 +117,24 @@ public:
 之后还得再回头做这道题
 
 另外[string类型](http://blog.csdn.net/tengfei461807914/article/details/52203202)的用法
+## C++算法
+```ruby
+class Solution {
+public:
+    string intToRoman(int num) {
+        char* c[4][10]={
+            {"","I","II","III","IV","V","VI","VII","VIII","IX"},
+            {"","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"},
+            {"","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"},
+            {"","M","MM","MMM"}
+        };
+        string roman;
+        roman.append(c[3][num / 1000 % 10]);    //将字符（串）连接到roman字符串后边
+        roman.append(c[2][num / 100 % 10]);
+        roman.append(c[1][num / 10 % 10]);
+        roman.append(c[0][num % 10]);
+         
+        return roman;
+    }
+};
+```
