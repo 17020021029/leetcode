@@ -1,5 +1,5 @@
 # Median of Two Sorted Arrays
-希望没人打开这篇，因为这道题我还没A就想睡觉了！！！！最近又有点神经衰弱，emmmm，老是想东想西，不在状态，要好好调整啊
+hard(看错了，哭)
 ## Problem
 There are two sorted arrays nums1 and nums2 of size m and n respectively.
 
@@ -16,7 +16,8 @@ nums2 = [3, 4]
 
 The median is (2 + 3)/2 = 2.5
 ## 解题思路
-主要考查如何减少时间复杂度
+主要考查如何减少时间复杂度</br>
+我的思路很简单，就是排序后，分奇偶讨论，但是总是在小地方编译错误，不知道思路是不是正确
 ## 未A代码
 ```
 void quickSort(int* nums,int first,int end){  
@@ -65,3 +66,5 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
     }
 }
 ```
+## 总结
+这几天一直不舒服，也没心思做题，连难度都看错了，这道题以后也要再做一遍
