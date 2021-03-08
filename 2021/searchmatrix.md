@@ -33,3 +33,30 @@ public:
 把大的问题转换为小的问题解决
 ### 二分算法
 分治算法的一种特例
+## 待改结果
+想用二分法做的一道题，但是超时了，明天再改
+```
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        int high = matrix[0].size()-1, low= 0;
+        int index = (high+low)/2;
+        for (int i=0;i<matrix.size();){
+            if(matrix[i][0]<target){
+                i++;
+            }
+            else{
+            index=(high+low)/2;
+            if(matrix[i][index] < target){
+                low=index+1;
+            }
+            else if (matrix[i][index] > target){
+                high = index-1;
+            }
+            else return true;
+        }
+        }
+        return false; 
+    }
+};
+```
